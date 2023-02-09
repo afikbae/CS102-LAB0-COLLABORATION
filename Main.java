@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /*
  * Lab0 main file
  */
@@ -5,7 +7,7 @@ public class Main {
     // Needed functionality:
     /**
      * int[] fillArray(int arrSize): Given an array size, create an int array that
-     * contains random integers in the range [0,100].
+     * contains random integers in the range [0,100]. DONE
      * 
      * void displayMenu(): Display the menu options, get the user’s choice, and call
      * the required methods to print out the result. Until the user chooses to exit,
@@ -26,4 +28,29 @@ public class Main {
      * int findSumOfEvenIndexes(int[] arr): Find the sum of even-indexed integers of
      * an array.
      */
+
+    /**
+     * Creates an array of size arrSize, which is filled with random numbers from 1
+     * to 100 (inclusive).
+     * 
+     * @author Sukru Eren Gokirmak
+     * @param arrSize the size of the array that will be created.
+     * @return a reference to an array of size arrSize.
+     */
+    public static int[] fillArray(int arrSize) {
+        int[] randArray = new int[arrSize];
+        Random rand = new Random();
+        for (int i = 0; i < arrSize; i++) {
+            randArray[i] = (int) (rand.nextDouble() * 100 + 1);
+        }
+        return randArray;
+    }
+
+    public static void main(String[] args) {
+
+        // Creating the array that will be worked on
+        int[] mainArray = fillArray(100);
+
+    }
+
 }
