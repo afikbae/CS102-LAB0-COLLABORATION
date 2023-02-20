@@ -53,7 +53,6 @@ public class SophisticatedArray {
      * Finds the maximum of the array.
      * 
      * @author Mehmet Anıl Yeşil
-     * @param arr is array that's being searched for the maximum value.
      * @return maximum value of array.
      */
     public int findMax() {
@@ -72,7 +71,6 @@ public class SophisticatedArray {
      * Finds the minimum of the array.
      * 
      * @author Mehmet Anıl Yeşil
-     * @param arr is array that's being searched for the minimum value.
      * @return minimum value of array.
      */
     public int findMin()
@@ -92,7 +90,6 @@ public class SophisticatedArray {
      * Finds the average of an array.
      * 
      * @author Emir Ensar Sevil
-     * @param arr the array to find its average.
      * @return the average of the array.
      */
     public double findAverage()
@@ -110,7 +107,6 @@ public class SophisticatedArray {
      * Finds the difference between the elements of an array and its average. 
      * 
      * @author Emir Ensar Sevil
-     * @param arr the array to use the elements.
      * @return the reference to an array that contains the difference of the elements from its average.
      */
     public double[] diffFromAv()
@@ -129,7 +125,7 @@ public class SophisticatedArray {
      * Finds the sum of even indexed elements.
      * 
      * @author Erfan FarhangKia
-     * @param arr the array to use the elements.
+     * @return sum of even indexed elements
      */
     public int findEvenSum ()
     {
@@ -145,10 +141,10 @@ public class SophisticatedArray {
     }
     
     /**
-     * Finds the sum of even indexed elements.
+     * Finds the sum of odd indexed elements.
      * 
      * @author Erfan FarhangKia
-     * @param arr the array to use the elements.
+     * @return sum of odd indexed elements
      */
     public int findOddSum ()
     {
