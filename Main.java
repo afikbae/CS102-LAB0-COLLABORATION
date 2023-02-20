@@ -46,6 +46,41 @@ public class Main {
         return randArray;
     }
     
+     /**
+     * Finds the maximum of the array.
+     * @author Mehmet Anıl Yeşil
+     * @param arr is array that searching for the maximum value.
+     * @return maximum value of array.
+     */
+    public static int maxArray(int[] arr) {
+    int max = arr[0];
+    for(int i = 1; i < arr.length; i++)
+    {
+        if(arr[i] > max)
+        {
+            max = arr[i];
+        }
+    }
+    return max;
+    }
+    /**
+        * Finds the minimum of the array.
+        * @author Mehmet Anıl Yeşil
+        * @param arr is array that searching for the minimum value.
+        * @return minimum value of array.
+        */
+    public static int minArray(int[] arr) {
+        int min = arr[0];
+        for(int i = 1; i < arr.length; i++)
+        {
+            if(arr[i] < min)
+            {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+    
     /**
      * Finds the average of an array.
      * 
