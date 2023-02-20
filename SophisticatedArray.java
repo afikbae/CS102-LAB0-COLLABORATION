@@ -3,7 +3,7 @@ import java.util.Random;
 /*
  * Lab0 main file
  */
-public class Main {
+public class SophisticatedArray {
     // Needed functionality:
     /**
      * int[] fillArray(int arrSize): Given an array size, create an int array that
@@ -29,6 +29,8 @@ public class Main {
      * an array.
      */
 
+    private int[] array;
+
     /**
      * Creates an array of size arrSize, which is filled with random numbers from 1
      * to 100 (inclusive).
@@ -37,13 +39,13 @@ public class Main {
      * @param arrSize the size of the array that will be created.
      * @return a reference to an array of size arrSize.
      */
-    public static int[] fillArray(int arrSize) {
+    public SophisticatedArray(int arrSize) {
         int[] randArray = new int[arrSize];
         Random rand = new Random();
         for (int i = 0; i < arrSize; i++) {
             randArray[i] = (int) (rand.nextDouble() * 100 + 1);
         }        
-        return randArray;
+        array = randArray;
     }
     
      /**
@@ -52,16 +54,16 @@ public class Main {
      * @param arr is array that searching for the maximum value.
      * @return maximum value of array.
      */
-    public static int maxArray(int[] arr) {
-    int max = arr[0];
-    for(int i = 1; i < arr.length; i++)
-    {
-        if(arr[i] > max)
+    public int maxArray() {
+        int max = this.array[0];
+        for (int i = 1; i < this.array.length; i++)
         {
-            max = arr[i];
+            if (this.array[i] > max)
+            {
+                max = this.array[i];
+            }
         }
-    }
-    return max;
+        return max;
     }
     /**
         * Finds the minimum of the array.
@@ -69,13 +71,14 @@ public class Main {
         * @param arr is array that searching for the minimum value.
         * @return minimum value of array.
         */
-    public static int minArray(int[] arr) {
-        int min = arr[0];
-        for(int i = 1; i < arr.length; i++)
+    public int minArray()
+    {
+        int min = this.array[0];
+        for(int i = 1; i < this.array.length; i++)
         {
-            if(arr[i] < min)
+            if(this.array[i] < min)
             {
-                min = arr[i];
+                min = this.array[i];
             }
         }
         return min;
@@ -88,14 +91,14 @@ public class Main {
      * @param arr the array to find its average.
      * @return the average of the array.
      */
-    public static int findAverage(int[] arr)
+    public int findAverage()
     {
         int av = 0;
-        for( int i = 0; i < arr.length; i++)
+        for( int i = 0; i < this.array.length; i++)
         {
-            av += arr[i]; 
+            av += this.array[i]; 
         }
-        av = av / arr.length;
+        av = av / this.array.length;
         return av;  
     }
     
@@ -106,13 +109,13 @@ public class Main {
      * @param arr the array to use the elements.
      * @return the reference to an array that contains the difference of the elements from its average.
      */
-    public static int[] diffFromAv(int[] arr)
+    public int[] diffFromAv()
     {
-        int av = Main.findAverage(arr);
-        int[] diffOfArray = new int[arr.length];
-        for( int i = 0; i < arr.length; i++)
+        int av = this.findAverage();
+        int[] diffOfArray = new int[this.array.length];
+        for( int i = 0; i < this.array.length; i++)
         {
-            diffOfArray[i] = arr[i] - av;
+            diffOfArray[i] = this.array[i] - av;
         }
         return diffOfArray;
     }
