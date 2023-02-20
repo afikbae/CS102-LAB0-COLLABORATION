@@ -1,8 +1,9 @@
+import java.util.Scanner;
+
 /**
  * Menu
+ * @author Mehmet Akif Şahin @afikbae
  */
-
-import java.util.Scanner;
 
 public class Menu {
 
