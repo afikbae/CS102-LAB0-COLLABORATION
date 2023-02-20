@@ -120,6 +120,13 @@ public class SophisticatedArray {
         return diffOfArray;
     }
 
+
+    /**
+     * Finds the sum of odd & even indexed elements.
+     * 
+     * @author Erfan FarhangKia
+     * @param arr the array to use the elements.
+     */
     public int findEvenSum ()
     {
         int sumOdd = 0;
