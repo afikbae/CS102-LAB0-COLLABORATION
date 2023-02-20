@@ -54,7 +54,7 @@ public class SophisticatedArray {
      * @param arr is array that searching for the maximum value.
      * @return maximum value of array.
      */
-    public int maxArray() {
+    public int findMax() {
         int max = this.array[0];
         for (int i = 1; i < this.array.length; i++)
         {
@@ -71,7 +71,7 @@ public class SophisticatedArray {
         * @param arr is array that searching for the minimum value.
         * @return minimum value of array.
         */
-    public int minArray()
+    public int findMin()
     {
         int min = this.array[0];
         for(int i = 1; i < this.array.length; i++)
@@ -120,4 +120,15 @@ public class SophisticatedArray {
         return diffOfArray;
     }
 
+    public int findEvenSum ()
+    {
+        //TODO
+        return 0;
+    }
+
+    public int findOddSum ()
+    {
+        //TODO
+        return 0;
+    }
 }
