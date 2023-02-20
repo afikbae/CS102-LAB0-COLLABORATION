@@ -122,13 +122,27 @@ public class SophisticatedArray {
 
     public int findEvenSum ()
     {
-        //TODO
-        return 0;
+        int sumOdd = 0;
+        for (int i = 0; i < this.array.length; i++)
+        {
+            if (i % 2 == 1)
+            {
+                sumOdd += this.array[i];
+            }
+        }
+        return sumOdd;
     }
 
     public int findOddSum ()
     {
-        //TODO
-        return 0;
+        int sumEven = 0;
+        for (int i = 0; i < this.array.length; i++)
+        {
+            if (i % 2 == 0)
+            {
+                sumEven += this.array[i];
+            }
+        }
+        return sumEven;
     }
 }

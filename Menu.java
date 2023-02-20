@@ -73,7 +73,8 @@ public class Menu {
             }
             if (option == 4)
             {
-                System.out.println();
+                System.out.println("\nThe sum of odd indexed elements is: " + arr.findOddSum());
+                System.out.println("\nThe sum of even indexed elements is: " + arr.findEvenSum());
             }
         }
     }
