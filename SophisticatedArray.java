@@ -4,29 +4,30 @@ import java.util.Random;
  * Lab0 main file
  */
 public class SophisticatedArray {
-    // Needed functionality:
+    // Implemented functionality:
     /**
-     * int[] fillArray(int arrSize): Given an array size, create an int array that
-     * contains random integers in the range [0,100]. DONE
+     * Menu functionality (Done in {@link Menu.java}): Display the menu options, get the user’s choice, 
+     * and call the required methods to print out the result. Until the user chooses to exit,
+     * the menu should be displayed. DONE
      * 
-     * void displayMenu(): Display the menu options, get the user’s choice, and call
-     * the required methods to print out the result. Until the user chooses to exit,
-     * you should display the menu again.
+     * {@link #SophisticatedArray()}: Given an array size, create an 
+     * integer array that contains random integers in the range [1,100]. DONE
      * 
-     * int findMin(int[] arr): Find the minimum of an array.
+     * {@link #findMin()}: Find the minimum of an array. DONE
      * 
-     * int findMax(int[] arr): Find the maximum of an array.
+     * {@link #findMax()}:Find the maximum of an array. DONE
      * 
-     * double findAvg(int[] arr): Find the average of an array. DONE
+     * {@link #findAverage()}: Find the average of an array. DONE
      * 
-     * String diffOfArray(int[] arr): Return an array
+     * {@link #diffFromAv()}: Return an array
      * such that newArr[i] = arr[i] - findAvg(arr)). DONE
      * 
-     * int findSumOfOddIndexes(int[] arr): Find the sum of odd-indexed integers of
-     * an array.
+     * {@link #findOddSum()}: Find the sum of odd-indexed integers of
+     * an array. DONE
      * 
-     * int findSumOfEvenIndexes(int[] arr): Find the sum of even-indexed integers of
-     * an array.
+     * {@link #findEvenSum()}: Find the sum of even-indexed integers of
+     * an array. DONE
+     * 
      */
 
     private int[] array;
@@ -44,14 +45,15 @@ public class SophisticatedArray {
         Random rand = new Random();
         for (int i = 0; i < arrSize; i++) {
             randArray[i] = (int) (rand.nextDouble() * 100 + 1);
-        }        
+        }
         array = randArray;
     }
     
      /**
      * Finds the maximum of the array.
+     * 
      * @author Mehmet Anıl Yeşil
-     * @param arr is array that searching for the maximum value.
+     * @param arr is array that's being searched for the maximum value.
      * @return maximum value of array.
      */
     public int findMax() {
@@ -65,12 +67,14 @@ public class SophisticatedArray {
         }
         return max;
     }
+    
     /**
-        * Finds the minimum of the array.
-        * @author Mehmet Anıl Yeşil
-        * @param arr is array that searching for the minimum value.
-        * @return minimum value of array.
-        */
+     * Finds the minimum of the array.
+     * 
+     * @author Mehmet Anıl Yeşil
+     * @param arr is array that's being searched for the minimum value.
+     * @return minimum value of array.
+     */
     public int findMin()
     {
         int min = this.array[0];
@@ -91,9 +95,9 @@ public class SophisticatedArray {
      * @param arr the array to find its average.
      * @return the average of the array.
      */
-    public int findAverage()
+    public double findAverage()
     {
-        int av = 0;
+        double av = 0;
         for( int i = 0; i < this.array.length; i++)
         {
             av += this.array[i]; 
@@ -103,16 +107,16 @@ public class SophisticatedArray {
     }
     
     /**
-     * Finds the difference between the elements of an array's elements and its average. 
+     * Finds the difference between the elements of an array and its average. 
      * 
      * @author Emir Ensar Sevil
      * @param arr the array to use the elements.
      * @return the reference to an array that contains the difference of the elements from its average.
      */
-    public int[] diffFromAv()
+    public double[] diffFromAv()
     {
-        int av = this.findAverage();
-        int[] diffOfArray = new int[this.array.length];
+        double av = this.findAverage();
+        double [] diffOfArray = new double [this.array.length];
         for( int i = 0; i < this.array.length; i++)
         {
             diffOfArray[i] = this.array[i] - av;
@@ -122,7 +126,7 @@ public class SophisticatedArray {
 
 
     /**
-     * Finds the sum of odd & even indexed elements.
+     * Finds the sum of even indexed elements.
      * 
      * @author Erfan FarhangKia
      * @param arr the array to use the elements.
@@ -132,20 +136,26 @@ public class SophisticatedArray {
         int sumOdd = 0;
         for (int i = 0; i < this.array.length; i++)
         {
-            if (i % 2 == 1)
+            if (i % 2 == 0)
             {
                 sumOdd += this.array[i];
             }
         }
         return sumOdd;
     }
-
+    
+    /**
+     * Finds the sum of even indexed elements.
+     * 
+     * @author Erfan FarhangKia
+     * @param arr the array to use the elements.
+     */
     public int findOddSum ()
     {
         int sumEven = 0;
         for (int i = 0; i < this.array.length; i++)
         {
-            if (i % 2 == 0)
+            if (i % 2 == 1)
             {
                 sumEven += this.array[i];
             }

@@ -38,7 +38,6 @@ public class Menu {
             "5- Exit\n"+
             "*******************************************************************");
 
-            
             do
             {
                 System.out.print("\nPlease choose an option 1-5 : ");
@@ -57,21 +56,21 @@ public class Menu {
             {
                 System.out.println("\nMinimum of the elements is : " + arr.findMin());
             }
-            if (option == 2)
+            else if (option == 2)
             {
                 System.out.println("\nMaximum of the elements is : " + arr.findMax());
             }
-            if (option == 3)
+            else if (option == 3)
             {
                 System.out.println("\nAverage of the elements is : " + arr.findAverage());
                 System.out.print("\nDifference of the each element from average is : ");
-                for (int i : arr.diffFromAv())
+                for (double i : arr.diffFromAv())
                 {
-                    System.out.print(i + " ");
+                    System.out.printf("%.2f ", i);
                 }
                 System.out.println();
             }
-            if (option == 4)
+            else if (option == 4)
             {
                 System.out.println("\nThe sum of odd indexed elements is: " + arr.findOddSum());
                 System.out.println("\nThe sum of even indexed elements is: " + arr.findEvenSum());
